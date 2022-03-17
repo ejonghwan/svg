@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    .hoho {width: 1000px; height: 800px; background: #ddd;}
+    tspan {fill: red;}
+</style>
+
+
+<svg class="hoho">
+    <!-- <rect x="10" y="20" width="200" height="100" />
+    <rect x="50" y="50" rx="10" ry="10" width="200" height="100" />
+    <circle cx="350" cy="250" r="30" />
+    <ellipse cx="200" cy="400" rx="100" ry="50" />
+    <line x1="10" x2="400" y1="30" y2="300" stroke="blue" />
+    <polyline points="0 0, 200 100, 150 300" />
+    <polygon points="0 0, 200 100, 150 300" /> -->
+    
+    # path 직선 
+    M : 맨처음 찍을 위치이동 x y
+    L : 직선 x y  
+    H : 수평 x 
+    V : 수직 y 
+    Z : 도형 닫기
+    
+    <!-- <path d="M 100 200 L 500 100 H 50 V 300 Z" stroke="red" stroke-width="3" fill="transparent" /> -->
+
+    # path 곡선 (시작점 중단점 끝점) 
+    C : 커브시작점 ..C 시작점xy, 중단점xy, 끝점xy  
+    <!-- <path d="M 100 150 C 100 150, 300 10, 500 150" stroke="red" stroke-width="16" fill="transparent" /> -->
+
+    <!-- <g> 묶을 태그들 </g>  -->
+
+    
+
+    <text x="20" y="50"> 
+        <textPath href="#text__curve">
+            테스트  <tspan>중간 텍스트 스타일 적용</tspan> 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
+        </textPath>
+    </text>
+    # 참조할 정보들 
+    <defs>
+        <path id="text__curve" d="M 50 400 C 50 400, 300 500, 400 400 C 400 400, 600 170, 700 300" stroke="red" fill="transparent"></path>
+    </defs>
+
+
+</svg>
+
+</body>
+</html>
